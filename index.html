@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <title>Connect Four</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="./model.js"></script>
+    <script type="text/javascript" src="./gameloop.js"></script>
+    <script type="text/javascript" src="./gamelogic.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+    <h2 align="center">Connect Four</h2>
+    <table id="board">
+        <tr id = "row6">
+            <td class = "1"><div class="empty"></div></td>
+            <td class = "2"><div class="empty"></div></td>
+            <td class = "3"><div class="empty"></div></td>
+            <td class = "4"><div class="empty"></div></td>
+            <td class = "5"><div class="empty"></div></td>
+            <td class = "6"><div class="empty"></div></td>
+            <td class = "7"><div class="empty"></div></td>
+        </tr>
+        <tr id = "row5">
+            <td class = "1"><div class="empty"></div></td>
+            <td class = "2"><div class="empty"></div></td>
+            <td class = "3"><div class="empty"></div></td>
+            <td class = "4"><div class="empty"></div></td>
+            <td class = "5"><div class="empty"></div></td>
+            <td class = "6"><div class="empty"></div></td>
+            <td class = "7"><div class="empty"></div></td>
+        </tr>
+        <tr id = "row4">
+            <td class = "1"><div class="empty"></div></td>
+            <td class = "2"><div class="empty"></div></td>
+            <td class = "3"><div class="empty"></div></td>
+            <td class = "4"><div class="empty"></div></td>
+            <td class = "5"><div class="empty"></div></td>
+            <td class = "6"><div class="empty"></div></td>
+            <td class = "7"><div class="empty"></div></td>
+        </tr>
+        <tr id = "row3">
+            <td class = "1"><div class="empty"></div></td>
+            <td class = "2"><div class="empty"></div></td>
+            <td class = "3"><div class="empty"></div></td>
+            <td class = "4"><div class="empty"></div></td>
+            <td class = "5"><div class="empty"></div></td>
+            <td class = "6"><div class="empty"></div></td>
+            <td class = "7"><div class="empty"></div></td>
+        </tr>
+        <tr id = "row2">
+            <td class = "1"><div class="empty"></div></td>
+            <td class = "2"><div class="empty"></div></td>
+            <td class = "3"><div class="empty"></div></td>
+            <td class = "4"><div class="empty"></div></td>
+            <td class = "5"><div class="empty"></div></td>
+            <td class = "6"><div class="empty"></div></td>
+            <td class = "7"><div class="empty"></div></td>
+        </tr>
+        <tr id = "row1">
+            <td class = "1"><div class="empty"></div></td>
+            <td class = "2"><div class="empty"></div></td>
+            <td class = "3"><div class="empty"></div></td>
+            <td class = "4"><div class="empty"></div></td>
+            <td class = "5"><div class="empty"></div></td>
+            <td class = "6"><div class="empty"></div></td>
+            <td class = "7"><div class="empty"></div></td>
+        </tr>
+    </table>
+    <script>
+        var red = "<div class='empty'><div class='red'></div></div>";
+        var black = "<div class='empty'><div class='black'></div></div>";
+        var player = 1;
+        var comp = 2;
+        var playing = true;
+        var board = new Board();
+        var logic = new GameLogic();
+        $(".1").hover(function(e) {
+            $(".1").find(".empty").css("background-color", e.type === "mouseenter" ? "#696969":"#faebd7"); 
+        });
+        $(".1").click(function() {
+            play(1); 
+        });
+        $(".2").hover(function(e) {
+            $(".2").find(".empty").css("background-color", e.type === "mouseenter" ? "#696969":"#faebd7"); 
+        });
+        $(".2").click(function() {
+            play(2); 
+        });
+        $(".3").hover(function(e) {
+            $(".3").find(".empty").css("background-color", e.type === "mouseenter" ? "#696969":"#faebd7"); 
+        });
+        $(".3").click(function() {
+            play(3); 
+        });
+        $(".4").hover(function(e) {
+            $(".4").find(".empty").css("background-color", e.type === "mouseenter" ? "#696969":"#faebd7"); 
+        });
+        $(".4").click(function() {
+            play(4); 
+        });
+        $(".5").hover(function(e) {
+            $(".5").find(".empty").css("background-color", e.type === "mouseenter" ? "#696969":"#faebd7"); 
+        });
+        $(".5").click(function() {
+            play(5); 
+        });
+        $(".6").hover(function(e) {
+            $(".6").find(".empty").css("background-color", e.type === "mouseenter" ? "#696969":"#faebd7"); 
+        });
+        $(".6").click(function() {
+            play(6); 
+        });
+        $(".7").hover(function(e) {
+            $(".7").find(".empty").css("background-color", e.type === "mouseenter" ? "#696969":"#faebd7"); 
+        });
+        $(".7").click(function() {
+            play(7); 
+        });
+    </script>
+</body>
+</html>

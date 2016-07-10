@@ -1,0 +1,63 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+
+#board {
+    border:solid #4285F4;
+    border-width:4px;
+    border-radius: 10px;
+    background-color:#75DDFF;
+    width:550px;
+    height:75%;
+    padding:4px;
+    border-spacing:4px;
+    margin: 0 auto;
+}
+
+#board td {
+    border:solid #4285F4;
+    border-width:2px;
+    border-radius: 4px;
+    vertical-align: top;
+    text-align: right;
+    width: 10%;
+    height: 15%;
+}
+
+#board tr {
+    width: 10%;
+    height: 15%;
+}
+
+.empty {
+    height: 65px;
+    background-color: #faebd7;
+}
+
+.red {
+    height: 50px;
+    width: 50px;
+    -webkit-border-radius: 25px; /* Safari, Chrome */
+    -moz-border-radius: 25px; /* Firefox */
+    border-radius: 25px; /* CSS3 */
+    background-color: red;
+    margin: 0px auto;
+    display: block;
+}
+
+.black {
+    height: 50px;
+    width: 50px;
+    -webkit-border-radius: 25px; /* Safari, Chrome */
+    -moz-border-radius: 25px; /* Firefox */
+    border-radius: 25px; /* CSS3 */
+    background-color: black;
+    margin: 0px auto;
+    display: block;
+}
+
+#move {
+    align: center;
+    float: left;
+}
